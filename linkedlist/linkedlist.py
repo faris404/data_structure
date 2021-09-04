@@ -89,9 +89,23 @@ class LinkedList:
             return data
          current_node = current_node.next
 
+   def reverse(self):
+      if not self.head:
+         raise Exception('List is Empty')
+      if not self.head.next:
+         return
+      current_node = self.head
+      prev_node = None
+      next_node = None
 
+      while current_node:
+         next_node = current_node.next
+         current_node.next = prev_node
+         prev_node = current_node
+         current_node = next_node
+      self.head = prev_node
 
-
+   
    def __iter__(self):
       self._iter = self.head
       return self

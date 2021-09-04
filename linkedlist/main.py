@@ -21,3 +21,14 @@ for i in iter(_list):
    if (i.data==2):
       i.data=12
 _list.view()
+
+print('===== reverse list =======')
+evens = LinkedList()
+evens.last(2)
+evens.last(4)
+evens.last(6)
+evens.last(8)
+evens.last(10)
+evens.view()
+evens.reverse()
+evens.view()
